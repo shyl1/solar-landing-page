@@ -20,7 +20,6 @@
   margin: 0;
   padding: 0;
   font-family: 'Inter', sans-serif;
-  color: var(--sec-color);
 }
 
 /* header styling */
@@ -36,7 +35,7 @@ header {
 
 .container{
   margin: 0 auto;
-  padding: 16px 150px;
+  padding: 16px 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,6 +103,7 @@ header {
   display: flex;
   flex-direction: column;
   text-align: right;
+  color: var(--sec-color);
 }
 
 .header-contact span {
@@ -116,6 +116,7 @@ header {
   line-height: 28px;
   letter-spacing: 0.94px;
   font-weight: 700;
+  color: var(--sec-color);
   text-decoration: none;
 }
 
@@ -126,6 +127,7 @@ header {
   background: url('./assests//images/solarPanels.png') no-repeat center center/cover;
   position: relative;
   overflow: hidden;
+  color: var(--sec-color);
 }
 
 .hero::before {
@@ -142,13 +144,11 @@ header {
 .hero-container{
   position: relative;
   z-index: 2;
-  top: 86px;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  height: 100%;
   gap: 24px;
 }
 
@@ -165,7 +165,6 @@ header {
   font-family: "Rajdhani", sans-serif;
   font-size: 18px;
 }
-
 
 .paginationBar .line-soft {
   width: 220px;
@@ -209,7 +208,8 @@ header {
   gap: 10px;
 }
 
-.btns .btn{
+.btns .btn , 
+.section3-content > button {
   width: 173px;
   height: 41px;
   padding: 12px 20px;
@@ -222,16 +222,170 @@ header {
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 8%;
+  cursor: pointer;
 }
 
 .btns .btn1{
   background-color: var(--btn-color);
+  color: var(--sec-color);
 }
 
-.btns .btn2{
+.btns .btn2 ,
+.section3-content > button {
   background-color: var(--third-color);
   color: var(--text-color);
 }
+
+/* section 2 styling */
+.secrion2 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.section2  .section2-content{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 23px;
+  width: 100%;
+  height: 100%;
+  margin: 50px 0;
+}
+
+.section2-content > div:first-child {
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  gap: 50px
+}
+
+.section2-content > div:first-child .text{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section2-content > div:first-child .text h1 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.section2-content > div:first-child .text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color:rgba(71, 84, 103, 1);
+}
+
+.section2-content > div:first-child .list{
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.section2-content > div:first-child .list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  justify-content: flex-start;
+}
+
+.section2-content > div:first-child .list li::before {
+  content: "0" counter(item) "/";
+  counter-increment: item;
+  font-size: 20px;
+  color: var(--listing-color);
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 4px;
+  margin-right: 5px;
+}
+
+.section2-content > div:last-child {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section2-content > div:last-child .solar-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: relative;
+}
+
+.section2-content > div:last-child .side-solar-image{
+  position: absolute;
+  width: 266px;
+  height: 208px;
+  background: var(--third-color);
+  border-radius:12px;
+  padding: 24px 30px;
+  bottom:10px;
+  left: -50px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.section2-content > div:last-child .side-solar-image p {
+  width: 206px;
+  height: 42px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height:  20px;
+  letter-spacing: 0.94px;
+}
+
+/* section 3*/
+.section3{
+  width: 100%;
+  height: 90vh;
+  background: url('./assests/images/windmill.png') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+}
+
+.section3-content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.section3-content > h1 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  color: var(--sec-color);
+  margin-bottom: 32px;
+}
+
+.section3-content > p {
+  width: 678px;
+  height: 56px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: var(--sec-color);
+  margin-bottom: 50px;
+}
+
+
+
 
 
 @media (max-width:1300px){
@@ -240,7 +394,7 @@ header {
   }
 }
 
-@media (max-width:1115px){
+@media (max-width:1125px){
   .container{
     padding: 0;
   }
@@ -251,6 +405,30 @@ header {
 
   .items a {
     font-size: 16px;
+  }
+
+  .section2-content > div:first-child .text h1 {
+    font-size: 30px;
+  }
+  
+  .section2-content > div:first-child .text p ,
+  .section2-content > div:first-child .list li , 
+  .section2-content > div:first-child .list li::before,
+  .section2-content > div:last-child .side-solar-image p  {
+    font-size: 12px;
+  }
+
+  .section2-content > div:last-child .side-solar-image{
+    left: -20px;
+  }
+
+  
+  .section3-content > h1 {
+    font-size: 38px;
+  }
+
+  .section3-content > p {
+    width: 400px;
   }
 }
 
@@ -308,13 +486,45 @@ header {
   }
 
   /*hero styling*/
-  .heading1 {
+  .heading1 
+  .section2-content > div:first-child .text h1  {
     font-size: 45px;
   }
 
   .hero-paragraph{
     font-size: 15px;
     max-width: 450px;
+  }
+
+  /* section 2 styling */
+  .section2  .section2-content{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section2-content > div:first-child .text p {
+    font-size: 15px;
+  }
+
+  .section2-content > div:first-child .list li {
+    font-size: 17px;
+  }
+
+  .section2-content > div:first-child .list li::before {
+    font-size: 20px;
+  }
+
+  .section2-content > div:last-child {
+    display: none;
+  }
+
+  .section3-content > h1 {
+    font-size: 32px;
+  }
+
+  .section3-content > p {
+    width: 420px;
+    font-size: 16px;
+    margin-bottom: 32px;
   }
 }
 
@@ -323,44 +533,70 @@ header {
     z-index: 0;
   }
 
-  .heading1 {
+  .heading1 , 
+  .section2-content > div:first-child .text h1
+  , .section3-content > h1 {
     font-size: 35px;
   }
 
-  .hero-paragraph{
+  .hero-paragraph ,
+  .section2-content > div:first-child .text p ,
+  .section2-content > div:first-child .list li,
+  .section2-content > div:first-child .list li::before {
     font-size: 14px;
     max-width: 390px;
     line-height: 20px;
   }
 
-  .btns .btn{
+  .btns .btn ,
+  .section3-content > button  {
     width: 110px;
     height: 30px;
     padding: 15px 5px;
     font-size: 10px;
   }
+
+  .section3-content > p {
+    width: 350px;
+    font-size: 15px;
+  }
+
+
 }
 
 @media (max-width:430px) {
-  .heading1 {
-    margin-top: 150px;
+  .heading1 ,
+  .section2-content > div:first-child .text h1
+  , .section3-content > h1 {
     font-size: 27px;
   }
 
-  .hero-paragraph{
+  .hero-paragraph ,
+  .section2-content > div:first-child .text {
     font-size: 10px;
     max-width: 300px;
     line-height: 15px;
+  }
+
+  .section2-content > div:first-child .list li,
+  .section2-content > div:first-child .list li::before {
+    font-size: 12px;
   }
 
   .paginationBar{
     display: none;
   }
 
-  .btns .btn{
+  .btns .btn , 
+  .section3-content > button {
     width: 110px;
     height: 30px;
     padding: 15px 5px;
     font-size: 10px;
   }
+  .section3-content > p {
+    width: 200px;
+    font-size: 12px;
+  }
+
 }
