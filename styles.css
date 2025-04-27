@@ -30,6 +30,8 @@ header {
   background: var(--primary-color);
   position: fixed;
   top: 0;
+  z-index: 9;
+  isolation: isolate;
 }
 
 .container{
@@ -117,6 +119,121 @@ header {
   text-decoration: none;
 }
 
+/* hero section */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('./assests//images/solarPanels.png') no-repeat center center/cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-container{
+  position: relative;
+  z-index: 2;
+  top: 86px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 24px;
+}
+
+.paginationBar{
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+  gap: 30px;
+  width: 323px;
+
+}
+
+.paginationBar .page-numbering{
+  font-family: "Rajdhani", sans-serif;
+  font-size: 18px;
+}
+
+
+.paginationBar .line-soft {
+  width: 220px;
+  height: 4px;
+  background: #575757;
+  border-radius: 3.75px;
+  position: relative;
+}
+
+.line-soft::after{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89px;
+  height: 100%;
+  background: var(--sec-color);
+  border-radius: 3.75px;
+  z-index: 1;
+}
+
+
+.heading1 {
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 100%;
+  letter-spacing: -2%;
+}
+
+.hero-paragraph{
+  width: 700px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+
+.btns {
+  width: 405px;
+  display: flex;
+  gap: 10px;
+}
+
+.btns .btn{
+  width: 173px;
+  height: 41px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  outline: none;
+  border-radius: 109px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 8%;
+}
+
+.btns .btn1{
+  background-color: var(--btn-color);
+}
+
+.btns .btn2{
+  background-color: var(--third-color);
+  color: var(--text-color);
+}
+
+
 @media (max-width:1300px){
   .container{
     padding: 0 20px;
@@ -139,7 +256,7 @@ header {
 
 
 @media (max-width:764px) {
-
+  /* header styling*/
   .logo{
     min-width: 100px;
     height: 45px;
@@ -159,6 +276,7 @@ header {
     padding:2rem 0;
     display: none;
     overflow: hidden;
+    isolation: isolate;
   }
 
   .active a , .items:hover a {
@@ -189,5 +307,60 @@ header {
     transform: rotate(-45deg) translate(5px, -6px);
   }
 
+  /*hero styling*/
+  .heading1 {
+    font-size: 45px;
+  }
+
+  .hero-paragraph{
+    font-size: 15px;
+    max-width: 450px;
+  }
 }
 
+@media (max-width:530px) {
+  .hero-content{
+    z-index: 0;
+  }
+
+  .heading1 {
+    font-size: 35px;
+  }
+
+  .hero-paragraph{
+    font-size: 14px;
+    max-width: 390px;
+    line-height: 20px;
+  }
+
+  .btns .btn{
+    width: 110px;
+    height: 30px;
+    padding: 15px 5px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width:430px) {
+  .heading1 {
+    margin-top: 150px;
+    font-size: 27px;
+  }
+
+  .hero-paragraph{
+    font-size: 10px;
+    max-width: 300px;
+    line-height: 15px;
+  }
+
+  .paginationBar{
+    display: none;
+  }
+
+  .btns .btn{
+    width: 110px;
+    height: 30px;
+    padding: 15px 5px;
+    font-size: 10px;
+  }
+}
