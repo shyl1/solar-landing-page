@@ -507,7 +507,6 @@ header {
   background: url('./assests/images/planning-enviroment.png') no-repeat center center/cover;
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -547,6 +546,136 @@ header {
   text-align: center;
 }
 
+
+/* section 6*/
+.section6 {
+  width: 100%;
+  height: auto;
+  background-color: rgba(255, 187, 28, 0.05);
+  padding: 50px 0;
+}
+
+.section6 .section6-content{
+  display: flex;
+}
+
+.section6-content > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section6-content > div:first-child .card-icon {
+  width: 56px;
+  height: 56px;
+  background-color: #D1E5DA;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.section6-content > div:first-child img {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.section6-content > div:first-child h1 {
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 100%;
+  letter-spacing: -2%;
+  color: var(--text-color);
+}
+
+.section6-content > div:first-child p {
+  width:358px;
+  height: 84px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: rgba(71, 84, 103, 1);
+}
+
+/* right side card*/
+.section6-content .cards{
+  display: flex;
+  justify-content: flex-end;
+  gap: 32px;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.section6-content .cards > div {
+  width: 358px;
+  height: auto;
+  border: 1px solid rgba(60, 171, 144, 1);
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.section6-content .cards > div .card-img {
+  width: 100%;
+  height: 106px;  
+  background-color:#D1E5DA; 
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.section6-content .cards > div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  mix-blend-mode: multiply;
+}
+
+.section6-content .cards > div .text h2 {
+  width: 290px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0%;
+  color: var(--text-color);
+}
+
+.section6-content .cards > div .text p{
+  width: 310px;
+  height: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: rgba(71, 84, 103, 1);
+  margin: 15px 0;
+}
+
+
+
+@media (max-width: 1380px){
+   /* section 6 */
+  .section6 .section6-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .section6-content .cards{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+} 
+
 @media (max-width:1125px){
 
   .header-contact{
@@ -579,7 +708,6 @@ header {
   .section3-content > p {
     width: 400px;
   }
-
 }
 
 @media (max-width:770px) {
@@ -635,7 +763,7 @@ header {
   }
 
   /*hero styling*/
-  .heading1 
+  .heading1 ,
   .section2-content > div:first-child .text h1  {
     font-size: 45px;
   }
@@ -675,8 +803,6 @@ header {
     font-size: 16px;
     margin-bottom: 32px;
   }
-
-  /* section 5*/
 }
 
 /* Responsive Design */
@@ -709,10 +835,52 @@ header {
     width: 450px;
     font-size: 16px;
   }
+
+  
+  /* section 6*/
+  .section6-content > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section6-content .cards{
+    display: flex;
+    justify-content: center;
+    width: 450px;
+  }
+
+  .section6-content .cards > div {
+    width: 450px;
+  }
+  
+  .section6-content > div:first-child img {
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+  /* right side card*/
+  .section6-content .cards{
+    display: flex;
+    justify-content: center;
+  }
+
+  .section6-content .cards > div .text h2 {
+    font-size: 16px;
+  }
+
+  .section6-content .cards > div .text p{
+    font-size: 14px;
+    margin: 10px 0;
+  }
 }
 
 
 @media (max-width:530px) {
+  .container {
+    padding: 0;
+  }
+
   .hero-content{
     z-index: 0;
   }
@@ -744,11 +912,6 @@ header {
     width: 350px;
     font-size: 15px;
   } 
-
-  .section3-content > p {
-    width: 200px;
-    font-size: 12px;
-  }
 
   /* section 4*/
   .section4-content .section4-text > h1 {
@@ -795,9 +958,53 @@ header {
     width: 400px;
     font-size: 12px;
   }
+
+  /* section 6*/
+  .section6-content > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section6-content > div:first-child h1 {
+    font-size: 25px;
+  }
+
+  .section6-content > div:first-child p {
+    width:300px;
+    font-size: 15px;
+  }
+
+  .section6-content > div:first-child .card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 2px;
+  }
+  
+  .section6-content > div:first-child img {
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+  /* right side card*/
+  .section6-content .cards{
+    display: flex;
+    justify-content: center;
+  }
+
+  .section6-content .cards > div .text h2 {
+    font-size: 16px;
+  }
+
+.section6-content .cards > div .text p{
+  font-size: 14px;
+  margin: 10px 0;
+}
 }
 
 @media (max-width:430px) {
+
   .heading1 ,
   .section2-content > div:first-child .text h1
   , .section3-content > h1 {
@@ -842,5 +1049,52 @@ header {
     width: 350px;
     font-size: 14px;
   }
-}
+  /* section 6*/
+  .section6-content > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 
+  .section6-content > div:first-child h1 {
+    font-size: 20px;
+  }
+
+  .section6-content > div:first-child p {
+    width:300px;
+    font-size: 12px;
+  }
+
+  /* section 6*/
+  .section6-content > div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section6-content .cards > div {
+    width: 250px;
+    padding: 12px;
+  }
+  
+  .section6-content > div:first-child img {
+    border-radius: 5px;
+    padding: 2px;
+  }
+
+  /* right side card*/
+  .section6-content .cards{
+    display: flex;
+    justify-content: center;
+  }
+
+  .section6-content .cards > div .text h2 {
+    font-size: 16px;
+  }
+
+  .section6-content .cards > div .text p{
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+}
