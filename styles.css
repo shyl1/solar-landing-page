@@ -1,5 +1,5 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&display=swap');
 
 /* base styling */
 :root {
@@ -659,6 +659,19 @@ header {
   margin: 15px 0;
 }
 
+.section6-content .cards > div button {
+  border: none;
+  outline: none;
+  width: 120px;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  color: var(--btn-color);
+  cursor: pointer;
+}
+
 /* section 7 */
 .section7 {
   width: 100%;
@@ -791,6 +804,87 @@ header {
   color: rgba(71, 84, 103, 1);
 }
 
+.section8-content .testimolines {
+  display: flex;
+  flex-direction: column;
+  background: rgba(60, 171, 144, 0.06);
+  flex: 1;
+  padding: 40px;
+  border-radius: 24px;
+  gap: 80px;
+}
+
+.section8-content .testimolines > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section8-content .testimolines > div h1 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: rgba(60, 171, 144, 1);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.section8-content .testimolines > div .pagination{
+  width: 72px;
+  height: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section8-content .testimolines > div .pagination span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(217, 217, 217, 1);
+}
+
+.section8-content .testimolines > div .pagination span.active {
+  background-color: rgba(107, 107, 107, 1);
+}
+
+.section8-content .testimolines > div:nth-child(2) p {
+  width: 516px;
+  height: 144px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: rgba(16, 24, 40, 1);
+}
+
+.section8-content .testimolines > div:nth-child(3) > div  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.section8-content .testimolines > div:nth-child(3) img {
+  width: 60px;
+  height: 60px;
+  border-radius:30px ;
+}
+
+.section8-content .testimolines > div:nth-child(3) > div:nth-child(2) {
+  width: 112px;
+  height: 48px;
+}
+
+.section8-content .testimolines > div:nth-child(3) > div:nth-child(2) i {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(28, 28, 28, 1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+}
 
 
 @media (max-width: 1380px){
@@ -841,6 +935,25 @@ header {
 
   .section3-content > p {
     width: 400px;
+  }
+  /* section 8*/
+  .section8-content  {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .section8-content .section8-text {
+    width: 100%;
+  }
+
+  .section8-content .testimolines {
+    width: 100%;
+  }
+
+  .section8-content .section8-text > h1 {
+    width: 700px;
   }
 }
 
@@ -946,6 +1059,12 @@ header {
   }
 
   /* section 7 */
+
+  .section7-content .cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .section7-content .cards > div {
     padding: 20px;
     gap: 10px;
@@ -965,6 +1084,63 @@ header {
   .section7-content .cards > div p {
     font-size: 14px;
   }
+
+  /* section 8*/
+  .section8-content  {
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .section8-content .section8-text {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .section8-content .testimolines {
+    width: 100%;
+  }
+
+  .section8-content .testimolines > div:nth-child(2) p {
+    width: 400px;
+    font-size: 19px;
+  }
+
+  .section8-content .testimolines > div .pagination{
+    width: 60px;
+  }
+  
+  .section8-content .testimolines > div .pagination span {
+    width: 6px;
+    height: 6px;
+  }
+  
+  .section8-content .testimolines > div:nth-child(3) > div  {
+    gap: 10px;
+  }
+  
+  .section8-content .testimolines > div:nth-child(3) img {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .section8-content .testimolines > div:nth-child(3) > div:nth-child(2) {
+    width: 80px;
+    height: 30px;
+  }
+  
+  .section8-content .testimolines > div:nth-child(3) > div:nth-child(2) i {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+  }
+  
+  .section8-content .section8-text > img {
+    width: 48px;
+    height: 48px;
+  }
+  
 }
 
 @media (max-width:890px){
@@ -1449,4 +1625,15 @@ header {
   .section7-content .section7-text > p {
     font-size: 14px;
   }
+  /* section 8 */
+  .section8-content .section8-text > h1 {
+    font-size: 20px;
+    width: 250px;
+  }
+
+  
+.section8-content .section8-text > p {
+  width: 250px;
+  font-size: 12px;
+}
 }
