@@ -1,5 +1,5 @@
 # solar-landing-page
 
-deployment link
-https://gilded-arithmetic-e75012.netlify.app/
+deployment link:
+solar-charging-landing-page.netlify.app
  
