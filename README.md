@@ -1,5 +1,5 @@
 # solar-landing-page
 
 deployment link:
-solar-charging-landing-page.netlify.app
+-- https://solar-charging-landing-page.netlify.app/
  
